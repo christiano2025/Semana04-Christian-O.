@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comentarios</title>
+</head>
+<body>
+
+<h2>Deja un comentario</h2>
+
+<form method="POST" action="/comentario">
+<input type="text" name="mensaje">
+<button type="submit">Enviar</button>
+</form>
+<!-- inja2 recorre la lista de comentarios y muestra cada 
+comentario como un párrafo dentro de la página web. -->
+<h3>Comentarios:</h3>
+
+{% for comentario in comentarios %}
+<p>{{ comentario }}</p> 
+{% endfor %}
+
+</body>
+</html>
